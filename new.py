@@ -56,3 +56,10 @@ print(f"In {col} column, there are {len(outliers)} outliers")
 sns.boxplot(df.amt_weekends)
 plt.show()
 
+#HEATMAP
+sns.heatmap(pd.crosstab(df.amt_weekends, df.age))
+plt.show()
+
+#MULTIVARIATE ANALYSIS
+sns.pairplot(df[["amt_weekends","amt_weekdays"]])
+plt.show()
